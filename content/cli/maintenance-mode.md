@@ -19,14 +19,14 @@ See [maintenance-mode]({{< relref "manager/maintenance-mode.md" >}}) for more in
 
 ### Activate
 
-Usage: `cfy maintenance-mode activate`
+Usage: `cfy maintenance-mode activate [options]`
 
 Activate maintenance mode on the manager disallowing further REST requests.
 
 #### Optional flags
 
 * `--wait=false` - Wait until there are no running executions and automatically activate maintenance-mode.
-* `timeout=SECONDS` - Operation timeout in seconds (The execution itself will keep going, but the CLI will stop waiting for it to terminate.)
+* `--timeout=SECONDS` - Operation timeout in seconds (The execution itself will keep going, but the CLI will stop waiting for it to terminate.)
 
 ### Deactivate
 
@@ -39,11 +39,3 @@ Deactivate maintenance mode on the manager to allow REST requests.
 Usage: `cfy maintenance-mode status`
 
 Retrieve the current maintenance-mode status.
-
-#### Required flags
-
-* `-f, --force=false` - This flag is required to perform the purge.
-
-#### Optional flags
-
-* `--backup-first=false` - Executes a `cfy logs backup` first.

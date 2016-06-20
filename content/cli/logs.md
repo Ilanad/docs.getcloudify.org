@@ -24,7 +24,7 @@ Create a backup of all log files on the manager stored under `/var/log/cloudify`
 
 ### Download
 
-Usage: `cfy logs download` 
+Usage: `cfy logs download [options]` 
 
 Create an archive containing the manager's logs and download them. The output file will contain the same content as with `cfy logs backup`.
 
@@ -35,13 +35,13 @@ Create an archive containing the manager's logs and download them. The output fi
 
 ### Purge
 
-Usage: `cfy logs purge`
+Usage: `cfy logs purge [options] -f`
 
 {{% gsNote title="Warning" %}}
-USE WITH CARE!
+USE WITH CARE! Log files in Cloudify manager are rotated. This is a safety measure in case the disk space on the manager runs out for some reason.
 {{% /gsNote %}}
 
-Purge all log files on the manager
+Purge all log files on the manager.
 
 #### Required flags
 
