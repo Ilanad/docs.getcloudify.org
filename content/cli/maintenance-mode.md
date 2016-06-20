@@ -13,7 +13,8 @@ This is required, for instance, when upgrading a manager via the `cfy upgrade` o
 
 Putting the manager in maintenance mode prevents it from running any executions.
 
-See [maintenance-mode]({{< relref "manager/maintenance-mode.md" >}}) for more information on maintenance-mode.
+See [maintenance-mode]({{< relref "manager/maintenance-mode.md" >}}) for more information.
+
 
 # Usage
 

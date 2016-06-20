@@ -30,7 +30,7 @@ Create an archive containing the manager's logs and download them. The output fi
 
 #### Optional flags
 
-* `-o, --output=cwd` - The output path for the downloaded file.
+* `-o, --output=OUTPUT_PATH` - The output path for the downloaded file.
 
 
 ### Purge
@@ -45,8 +45,8 @@ Purge all log files on the manager.
 
 #### Required flags
 
-* `-f, --force=false` - This flag is required to perform the purge.
+* `-f, --force` - This flag is required to perform the purge.
 
 #### Optional flags
 
-* `--backup-first=false` - Executes a `cfy logs backup` first.
+* `--backup-first` - Executes a `cfy logs backup` first.
