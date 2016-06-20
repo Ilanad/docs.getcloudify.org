@@ -20,36 +20,39 @@ Usage: `cfy executions start`
 
 #### Required flags
 
-  `--allow-custom-parameters`
+* `--allow-custom-parameters`
                         Allow passing custom parameters (which were not
                         defined in the workflow's schema in the blueprint) to
                         the execution
-  `-d DEPLOYMENT_ID, --deployment-id DEPLOYMENT_ID`
+* `-d DEPLOYMENT_ID, --deployment-id DEPLOYMENT_ID`
                         The deployment ID to execute the workflow on
-  `-p PARAMETERS, --parameters PARAMETERS`
+* `-p PARAMETERS, --parameters PARAMETERS`
                         Parameters for the workflow execution (Can be provided
                         as wildcard based paths (*.yaml, etc..) to YAML files,
                         a JSON string or as "key1=value1;key2=value2"). This
                         argument can be used multiple times.
-  `-f, --force`           Execute the workflow even if there is an ongoing
+* `-f, --force`           Execute the workflow even if there is an ongoing
                         execution for the given deployment
-  `--timeout TIMEOUT`     Operation timeout in seconds (The execution itself
+* `--timeout TIMEOUT`     Operation timeout in seconds (The execution itself
                         will keep going, but the CLI will stop waiting for it
                         to terminate) (default: 900)
-  `-w WORKFLOW, --workflow WORKFLOW`
+* `-w WORKFLOW, --workflow WORKFLOW`
                         The workflow to execute
-  `-l, --include-logs`    Include logs in returned events
-  `--json`                Output events in a consumable JSON format
+* `-l, --include-logs`    Include logs in returned events
+* `--json`                Output events in a consumable JSON format
 
 
 ### Cancel
 
-Usage: `cfy executions cancel [options]` 
+Usage: `cfy executions cancel [options] -e EXECUTION_ID` 
 
+#### Required flags
+
+* `-e, --execution-id=EXECUTION_ID` - The ID of the execution to cancel
 
 #### Optional flags
 
-* `-o, --output=OUTPUT_PATH` - The output path for the downloaded file.
+* `-f, --force` - Terminate the execution abruptly, rather than request an orderly termination
 
 
 ### Get
@@ -58,7 +61,8 @@ Usage: `cfy executions get [options] -f`
 
 #### Required flags
 
-* `-f, --force` - This flag is required to perform the purge.
+* `-e, --execution-id=EXECUTION_ID` - The ID of the execution to get
+
 
 #### Optional flags
 
@@ -68,3 +72,7 @@ Usage: `cfy executions get [options] -f`
 ### List
 
 Usage: `cfy executions list`
+
+* -d DEPLOYMENT_ID, --deployment-id DEPLOYMENT_ID
+                        The deployment ID to list executions for
+  --system-workflows    Include executions of system workflows
