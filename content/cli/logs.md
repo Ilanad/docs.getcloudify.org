@@ -15,12 +15,16 @@ To use the command you must have the credentials (user and key) set in the local
 
 # Usage
 
-### `cfy logs backup`
+### Backup
+
+Usage: `cfy logs backup`
 
 Create a backup of all log files on the manager stored under `/var/log/cloudify` and the output of `journalctl` and stores them under `/var/log/cloudify-manager-logs_MANAGER_DATE_MANAGER_IP.tar.gz`
 
 
-### `cfy logs download` 
+### Download
+
+Usage: `cfy logs download` 
 
 Create an archive containing the manager's logs and download them. The output file will contain the same content as with `cfy logs backup`.
 
@@ -29,7 +33,9 @@ Create an archive containing the manager's logs and download them. The output fi
 * `-o, --output=cwd` - The output path for the downloaded file.
 
 
-### `cfy logs purge`
+### Purge
+
+Usage: `cfy logs purge`
 
 {{% gsNote title="Warning" %}}
 USE WITH CARE!
