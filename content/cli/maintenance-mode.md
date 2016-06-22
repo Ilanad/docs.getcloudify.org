@@ -16,9 +16,9 @@ Putting the manager in maintenance mode prevents it from running any executions.
 See [maintenance-mode]({{< relref "manager/maintenance-mode.md" >}}) for more information.
 
 
-# Usage
+## Commands
 
-### Activate
+### activate
 
 Usage: `cfy maintenance-mode activate [options]`
 
@@ -29,13 +29,13 @@ Activate maintenance mode on the manager disallowing further REST requests.
 * `--wait=false` - Wait until there are no running executions and automatically activate maintenance-mode.
 * `--timeout=SECONDS` - Operation timeout in seconds (The execution itself will keep going, but the CLI will stop waiting for it to terminate.)
 
-### Deactivate
+### deactivate
 
 Usage: `cfy maintenance-mode deactivate` 
 
 Deactivate maintenance mode on the manager to allow REST requests.
 
-### Status
+### status
 
 Usage: `cfy maintenance-mode status`
 

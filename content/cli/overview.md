@@ -11,7 +11,9 @@ Cloudify's Command-Line Interface is the default method for interacting with Clo
 
 If you haven't already [installed Cloudify]({{< relref "installation/from-packages.md" >}}), now would be a good time to do so.
 
-The interface can be accessed by running the `cfy` command. `cfy -h` will get you started:
+# Usage
+
+The interface can be accessed by running the `cfy` command in your terminal. `cfy -h` will get you started:
 
 {{< gsHighlight  bash  >}}
 $ cfy -h
@@ -53,8 +55,37 @@ Commands:
     install             Install an application via the Manager
     uninstall           Uninstall an existing application installed via a
                         Manager
+
+...
 {{< /gsHighlight >}}
 
-A full `cfy` commands reference can be found [here]({{< relref "cli/reference.html" >}}).
+Note that some features (such as viewing metric graphs and application topologies) are only available via the Web UI if running Cloudify manager.
 
-Note that some features (such as viewing metric graphs and application topologies) are only available via the Web UI if running Cloudify Manager.
+
+# Verbose Output
+
+The ``-v/--verbose`` flag is available for all commands. It sets the command verbosity level. At the moment, there are 4 verbosity levels:
+
+* Running a command without the verbose flag. (This is obviously the default).
+* Running a command with ``-v`` will print tracebacks where relevant, in addition to the normal output.
+* Running a command with ``-vv`` will, in addition, show ``DEBUG`` log statements of local/remote execution events.
+* Running a command with ``-vvv`` will, in addition, set all loggers declared in the `config <https://github.com/cloudify-cosmo/cloudify-cli/blob/3.4/cloudify_cli/resources/config.yaml>`_ file to debug mode.
+
+{{% gsNote title="Note" %}}
+``--debug`` is equivalent to ``-vvv``
+{{% /gsNote %}}
+
+
+# Inputs and Parameters
+
+All commands that accept inputs or paramaters (e.g. `cfy executions start` or `cfy deployments create`) expect the value to represent a dictionary. Valid formats are:
+
+ * A path to the YAML file
+ * A path to a directory containing one or more YAML files
+ * A wildcard based path to one or more YAML files
+ * A string formatted as JSON
+ * A string formatted as "key1=value1;key2=value2"
+
+{{% gsNote title="Note" %}}
+Using the `key=value` method, you cannot currently pass non-string values
+{{% /gsNote %}}

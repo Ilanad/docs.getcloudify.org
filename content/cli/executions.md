@@ -12,13 +12,13 @@ The `cfy executions` command is used to manage workflow executions on a Cloudify
 You can use the command to start, cancel and and list executions. You can also get a single execution's info.
 
 
-# Usage
+## Commands
 
-### Start
+### start
 
 Usage: `cfy executions start [options] -d DEPLOYMENT_ID`
 
-Start an execution for a specific deployment 
+Start an workflow execution for a specific deployment 
 
 #### Required flags
 
@@ -44,7 +44,7 @@ Start an execution for a specific deployment
 * `--json`                Output events in a consumable JSON format
 
 
-### Cancel
+### cancel
 
 Usage: `cfy executions cancel [options] -e EXECUTION_ID` 
 
@@ -58,7 +58,7 @@ Cancel
 * `-f, --force` - Terminate the execution abruptly, rather than request an orderly termination
 
 
-### Get
+### get
 
 Usage: `cfy executions get [options] -e EXECUTION_ID`
 
@@ -68,7 +68,7 @@ Retrieve information on a single execution.
 
 * `-e, --execution-id=EXECUTION_ID` - The ID of the execution to get
 
-### List
+### list
 
 Usage: `cfy executions list`
 

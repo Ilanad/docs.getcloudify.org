@@ -14,9 +14,9 @@ You can use the command to create, upload, download, delete and list snapshots a
 See [snapshots]({{< relref "manager/snapshots.md" >}}) for more information.# Usage
 
 
-# Usage
+## Commands
 
-### Create
+### create
 
 Usage: `cfy snapshots create [options] -s SNAPSHOT_ID`
 
@@ -32,7 +32,7 @@ Create a snapshot of the manager.
 * `--include-metrics` - Include metrics data in the snapshot
 
 
-### Delete
+### delete
 
 Usage: `cfy snapshots delete [options] -s SNAPSHOT_ID` 
 
@@ -43,7 +43,7 @@ Delete a snapshot from the manager.
 * `-s, --snapshot-id=SNAPSHOT_ID` - The ID of the snapshot
 
 
-### Download
+### download
 
 Usage: `cfy snapshots download [options] -s SNAPSHOT_ID`
 
@@ -58,14 +58,14 @@ Download a snapshot from the manager.
 * `-o, --output=OUTPUT_PATH` - The output path for the downloaded file.
 
 
-### List
+### list
 
 Usage: `cfy snapshots list` 
 
 List all available snapshots on the manager.
 
 
-### Restore
+### restore
 
 Usage: `cfy snapshots restore [options] -s SNAPSHOT_ID` 
 
@@ -81,7 +81,7 @@ Restore a newly bootstrapped manager using a snapshot archive.
 * `--without-deployments-envs` - Restore a snapshot (excluding existing deployments)
 
 
-### Upload
+### upload
 
 Usage: `cfy snapshots upload -p SNAPSHOT_FILE -s SNAPSHOT_ID` 
 
